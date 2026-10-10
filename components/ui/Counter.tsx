@@ -1,7 +1,18 @@
+
 "use client";
 
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
+
+interface CounterProps {
+  to: number;
+  decimals?: number;
+  duration?: number;
+  prefix?: string;
+  suffix?: string;
+  className?: string;
+  suffixClassName?: string;
+}
 
 /** Animated number that counts up when scrolled into view. */
 export default function Counter({
@@ -12,42 +23,48 @@ export default function Counter({
   suffix = "",
   className = "",
   suffixClassName = "",
-}: {
-  to: number;
-  decimals?: number;
-  duration?: number;
-  prefix?: string;
-  suffix?: string;
-  className?: string;
-  suffixClassName?: string;
-}) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
+}: CounterProps) {
+  const containerRef = useRef<HTMLSpanElement>(null);
+  const numberRef = useRef<HTMLSpanElement>(null);
+
+  const inView = useInView(containerRef, {
+    once: true,
+    amount: 0.1,
+  });
 
   useEffect(() => {
-    if (!inView) return;
+    if (!inView || !numberRef.current) return;
+
+    const element = numberRef.current;
+
     const controls = animate(0, to, {
       duration,
       ease: [0.16, 1, 0.3, 1],
-      onUpdate(v) {
-        if (ref.current) {
-          ref.current.textContent = v.toLocaleString("en-IN", {
-            minimumFractionDigits: decimals,
-            maximumFractionDigits: decimals,
-          });
-        }
+      onUpdate(value) {
+        element.textContent = value.toLocaleString("en-IN", {
+          minimumFractionDigits: decimals,
+          maximumFractionDigits: decimals,
+        });
       },
     });
+
     return () => controls.stop();
   }, [inView, to, decimals, duration]);
 
+  const initialValue = (0).toLocaleString("en-IN", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+
   return (
-    <span className={className}>
+    <span ref={containerRef} className={className}>
       {prefix}
-      <span ref={ref} aria-label={`${to}${suffix}`}>
-        {(0).toLocaleString("en-IN", { minimumFractionDigits: decimals })}
+      <span ref={numberRef} aria-label={`${to}${suffix}`}>
+        {initialValue}
       </span>
-      <span className={suffixClassName}>{suffix}</span>
+      {suffix && (
+        <span className={suffixClassName}>{suffix}</span>
+      )}
     </span>
   );
 }
