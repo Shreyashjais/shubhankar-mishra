@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280" width="720" height="1280" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(5,12%,16%)"/><stop offset="1" stop-color="#070707"/></linearGradient>
+    <radialGradient id="warm" cx="180.0" cy="448.0" r="960.0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="hsl(13,70%,52%)" stop-opacity=".55"/><stop offset="1" stop-color="hsl(5,60%,40%)" stop-opacity="0"/></radialGradient>
+    <radialGradient id="red" cx="72.0" cy="1216.0" r="768.0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#C8102E" stop-opacity=".45"/><stop offset="1" stop-color="#C8102E" stop-opacity="0"/></radialGradient>
+    <linearGradient id="body0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d2b2b"/><stop offset="1" stop-color="#0b0b0b"/></linearGradient>
+    <linearGradient id="head0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3636"/><stop offset="1" stop-color="#151414"/></linearGradient>
+    <linearGradient id="rim0" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#C8102E" stop-opacity=".9"/><stop offset=".5" stop-color="#F1ECE3" stop-opacity=".15"/><stop offset="1" stop-color="#F1ECE3" stop-opacity="0"/></linearGradient>
+    <radialGradient id="vig" cx="50%" cy="45%" r="75%"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 0"/></filter>
+  </defs>
+  <rect width="720" height="1280" fill="url(#bg)"/>
+  <rect width="720" height="1280" fill="url(#warm)"/>
+  <rect width="720" height="1280" fill="url(#red)"/>
+  <circle cx="503.99999999999994" cy="704.0" r="273.6" fill="none" stroke="#C8102E" stroke-width="2" opacity=".7"/><circle cx="503.99999999999994" cy="704.0" r="187.20000000000002" fill="none" stroke="#F1ECE3" stroke-width="1" opacity=".25"/><rect x="86.39999999999999" y="320.0" width="8.64" height="640.0" fill="#C8102E"/>
+  <rect width="720" height="1280" fill="url(#vig)"/>
+  <rect width="720" height="1280" filter="url(#grain)" opacity=".14"/>
+  <text x="28.8" y="1235.2" font-family="monospace" font-size="14" fill="#F1ECE3" opacity=".45">short-6 (9:16)</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" width="1000" height="1250" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(354,12%,16%)"/><stop offset="1" stop-color="#070707"/></linearGradient>
+    <radialGradient id="warm" cx="700.0" cy="250.0" r="937.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="hsl(362,70%,52%)" stop-opacity=".55"/><stop offset="1" stop-color="hsl(354,60%,40%)" stop-opacity="0"/></radialGradient>
+    <radialGradient id="red" cx="100.0" cy="1187.5" r="750.0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#C8102E" stop-opacity=".45"/><stop offset="1" stop-color="#C8102E" stop-opacity="0"/></radialGradient>
+    <linearGradient id="body0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d2b2b"/><stop offset="1" stop-color="#0b0b0b"/></linearGradient>
+    <linearGradient id="head0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3636"/><stop offset="1" stop-color="#151414"/></linearGradient>
+    <linearGradient id="rim0" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#C8102E" stop-opacity=".9"/><stop offset=".5" stop-color="#F1ECE3" stop-opacity=".15"/><stop offset="1" stop-color="#F1ECE3" stop-opacity="0"/></linearGradient>
+    <radialGradient id="vig" cx="50%" cy="45%" r="75%"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 0"/></filter>
+  </defs>
+  <rect width="1000" height="1250" fill="url(#bg)"/>
+  <rect width="1000" height="1250" fill="url(#warm)"/>
+  <rect width="1000" height="1250" fill="url(#red)"/>
+  <circle cx="700.0" cy="687.5" r="380.0" fill="none" stroke="#C8102E" stroke-width="2" opacity=".7"/><circle cx="700.0" cy="687.5" r="260.0" fill="none" stroke="#F1ECE3" stroke-width="1" opacity=".25"/><rect x="120.0" y="312.5" width="12.0" height="625.0" fill="#C8102E"/>
+  <rect width="1000" height="1250" fill="url(#vig)"/>
+  <rect width="1000" height="1250" filter="url(#grain)" opacity=".14"/>
+  <text x="40.0" y="1206.25" font-family="monospace" font-size="17.0" fill="#F1ECE3" opacity=".45">project-3 (4:5)</text>
+</svg>

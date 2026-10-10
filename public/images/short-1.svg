@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280" width="720" height="1280" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(10,12%,16%)"/><stop offset="1" stop-color="#070707"/></linearGradient>
+    <radialGradient id="warm" cx="503.99999999999994" cy="448.0" r="960.0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="hsl(18,70%,52%)" stop-opacity=".55"/><stop offset="1" stop-color="hsl(10,60%,40%)" stop-opacity="0"/></radialGradient>
+    <radialGradient id="red" cx="72.0" cy="1216.0" r="768.0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#C8102E" stop-opacity=".45"/><stop offset="1" stop-color="#C8102E" stop-opacity="0"/></radialGradient>
+    <linearGradient id="body0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d2b2b"/><stop offset="1" stop-color="#0b0b0b"/></linearGradient>
+    <linearGradient id="head0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3636"/><stop offset="1" stop-color="#151414"/></linearGradient>
+    <linearGradient id="rim0" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#C8102E" stop-opacity=".9"/><stop offset=".5" stop-color="#F1ECE3" stop-opacity=".15"/><stop offset="1" stop-color="#F1ECE3" stop-opacity="0"/></linearGradient>
+    <radialGradient id="vig" cx="50%" cy="45%" r="75%"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 0"/></filter>
+  </defs>
+  <rect width="720" height="1280" fill="url(#bg)"/>
+  <rect width="720" height="1280" fill="url(#warm)"/>
+  <rect width="720" height="1280" fill="url(#red)"/>
+  
+    <g>
+      <path d="M136.8 1280 C 154.656 668.0176, 235.00799999999998 422.49760000000003, 360.0 422.49760000000003 C 484.992 422.49760000000003, 565.344 668.0176, 583.2 1280 Z" fill="url(#body0)" stroke="url(#rim0)" stroke-width="3"/>
+      <rect x="328.12704" y="365.58160000000004" width="63.745920000000005" height="83.47680000000001" fill="#141313"/>
+      <ellipse cx="360.0" cy="312.46000000000004" rx="62.22816" ry="75.888" fill="url(#head0)" stroke="url(#rim0)" stroke-width="3"/>
+    </g>
+  <rect width="720" height="1280" fill="url(#vig)"/>
+  <rect width="720" height="1280" filter="url(#grain)" opacity=".14"/>
+  <text x="28.8" y="1235.2" font-family="monospace" font-size="14" fill="#F1ECE3" opacity=".45">short-1 (9:16)</text>
+</svg>

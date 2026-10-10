@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(20,12%,16%)"/><stop offset="1" stop-color="#070707"/></linearGradient>
+    <radialGradient id="warm" cx="320.0" cy="251.99999999999997" r="960.0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="hsl(28,70%,52%)" stop-opacity=".55"/><stop offset="1" stop-color="hsl(20,60%,40%)" stop-opacity="0"/></radialGradient>
+    <radialGradient id="red" cx="128.0" cy="684.0" r="768.0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#C8102E" stop-opacity=".45"/><stop offset="1" stop-color="#C8102E" stop-opacity="0"/></radialGradient>
+    <linearGradient id="body0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d2b2b"/><stop offset="1" stop-color="#0b0b0b"/></linearGradient>
+    <linearGradient id="head0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3636"/><stop offset="1" stop-color="#151414"/></linearGradient>
+    <linearGradient id="rim0" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#C8102E" stop-opacity=".9"/><stop offset=".5" stop-color="#F1ECE3" stop-opacity=".15"/><stop offset="1" stop-color="#F1ECE3" stop-opacity="0"/></linearGradient>
+    <radialGradient id="vig" cx="50%" cy="45%" r="75%"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 0"/></filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#warm)"/>
+  <rect width="1280" height="720" fill="url(#red)"/>
+  
+    <g>
+      <path d="M230.40000000000003 720 C 245.76000000000005 589.056, 314.88 377.85600000000005, 422.40000000000003 377.85600000000005 C 529.9200000000001 377.85600000000005, 599.0400000000001 589.056, 614.4000000000001 720 Z" fill="url(#body0)" stroke="url(#rim0)" stroke-width="3"/>
+      <rect x="394.98240000000004" y="328.8960000000001" width="54.8352" height="71.808" fill="#141313"/>
+      <ellipse cx="422.40000000000003" cy="283.20000000000005" rx="53.529599999999995" ry="65.28" fill="url(#head0)" stroke="url(#rim0)" stroke-width="3"/>
+    </g>
+    <g>
+      <path d="M691.2 720 C 705.5360000000001 577.6256000000001, 770.0480000000001 380.5056000000001, 870.4000000000001 380.5056000000001 C 970.7520000000001 380.5056000000001, 1035.2640000000001 577.6256000000001, 1049.6000000000001 720 Z" fill="url(#body0)" stroke="url(#rim0)" stroke-width="3"/>
+      <rect x="844.8102400000001" y="334.80960000000005" width="51.17952000000001" height="67.02080000000002" fill="#141313"/>
+      <ellipse cx="870.4000000000001" cy="292.16" rx="49.96096000000001" ry="60.92800000000001" fill="url(#head0)" stroke="url(#rim0)" stroke-width="3"/>
+    </g><rect x="0" y="590.4" width="1280" height="129.6" fill="#0a0a0a" opacity=".85"/><rect x="601.5999999999999" y="446.4" width="15.36" height="158.4" fill="#2b2929"/><ellipse cx="609.28" cy="439.2" rx="25.6" ry="21.599999999999998" fill="#1c1b1b" stroke="#C8102E" stroke-width="2"/>
+  <rect width="1280" height="720" fill="url(#vig)"/>
+  <rect width="1280" height="720" filter="url(#grain)" opacity=".14"/>
+  <text x="51.2" y="694.8" font-family="monospace" font-size="21.76" fill="#F1ECE3" opacity=".45">REPLACE: ep-1 (16:9)</text>
+</svg>
