@@ -1,7 +1,6 @@
-
 "use client";
 
-import { useRef } from "react";
+import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { heroMarquee, images, site } from "@/lib/content";
 import Media from "../ui/Media";
@@ -9,28 +8,25 @@ import Button from "../ui/Button";
 import Magnetic from "../ui/Magnetic";
 import Marquee from "../ui/Marquee";
 import RotatingBadge from "../ui/RotatingBadge";
+import { preloaderState } from "../Preloader";
 import { ease } from "../ui/motion";
 
-const D = 1.7; // wait for the preloader curtain
-
 export default function Hero() {
-  const ref = useRef<HTMLElement>(null);
+  // Wait for the preloader curtain only on a full page load.
+  // When arriving by clicking a link, the curtain doesn't play, so start quickly.
+  const [D] = useState(() => (preloaderState.done ? 0.3 : 1.7));
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const portraitY = useTransform(scrollYProgress, [0, 1], ["0%", "16%"]);
-  const portraitScale = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
-  const nameY = useTransform(scrollYProgress, [0, 1], ["0%", "-22%"]);
-  const glowY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const fade = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  // Track the page scroll directly (the hero is always at the top of the page).
+  const { scrollY } = useScroll();
+  const portraitY = useTransform(scrollY, [0, 900], ["0%", "16%"]);
+  const portraitScale = useTransform(scrollY, [0, 900], [1, 1.12]);
+  const nameY = useTransform(scrollY, [0, 900], ["0%", "-22%"]);
+  const glowY = useTransform(scrollY, [0, 900], ["0%", "30%"]);
+  const fade = useTransform(scrollY, [0, 650], [1, 0]);
 
   return (
     <section
       id="hero"
-      ref={ref}
       aria-labelledby="hero-title"
       className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-ink text-bone"
     >
@@ -44,8 +40,8 @@ export default function Hero() {
         {/* Portrait */}
         <motion.div
           style={{ y: portraitY, opacity: fade }}
-          
-          className="relative z-10 mx-auto mb-[-18%] w-[78%] max-w-[460px] sm:mb-[-12%] lg:absolute lg:bottom-0 lg:right-10 lg:mx-0 lg:mb-0 lg:w-[min(40vw,calc((100svh_-_12rem)*0.8))] lg:max-w-[700px]">
+          className="relative z-10 mx-auto mb-[-18%] w-[78%] max-w-[460px] sm:mb-[-12%] lg:absolute lg:bottom-0 lg:right-10 lg:mx-0 lg:mb-0 lg:w-[min(40vw,calc((100svh_-_12rem)*0.8))] lg:max-w-[700px]"
+        >
           <motion.div
             initial={{ opacity: 0, scale: 1.08 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -64,10 +60,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          <span
-            aria-hidden
-            className="absolute -left-4 top-10 hidden h-[60%] w-px bg-red lg:block"
-          />
+          <span aria-hidden className="absolute -left-4 top-10 hidden h-[60%] w-px bg-red lg:block" />
 
           <RotatingBadge
             className="absolute -left-6 bottom-[22%] hidden h-32 w-32 text-bone lg:block xl:-left-14 xl:h-40 xl:w-40"

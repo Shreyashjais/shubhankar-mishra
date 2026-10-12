@@ -17,7 +17,7 @@ import Foundation from "@/components/sections/Foundation";
 import Team from "@/components/sections/Team";
 import Careers from "@/components/sections/Careers";
 import GetStarted from "@/components/sections/GetStarted";
-import Footer from "@/components/Footer";
+
 
 export default function Home() {
   return (
@@ -41,7 +41,7 @@ export default function Home() {
       <Team />
       <Careers />
       <GetStarted />
-      <Footer />
+     
     </>
   );
 }

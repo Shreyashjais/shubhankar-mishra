@@ -36,6 +36,7 @@ export const site = {
 
 export const images = {
   portrait: "/shubhankar-hero.png",
+  old:"/old.png",
   about: "/about.png",
   foundation: img("foundation"),
 };
